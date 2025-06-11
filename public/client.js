@@ -1,14 +1,19 @@
-// Scroll animations for .fade-in elements
-document.addEventListener("DOMContentLoaded", () => {
-  const fadeElems = document.querySelectorAll(".fade-in");
+// Scroll Animation for elements with .fade-in
+const faders = document.querySelectorAll('.fade-in');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-      }
-    });
-  }, { threshold: 0.1 });
+const appearOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
 
-  fadeElems.forEach(elem => observer.observe(elem));
+const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    appearOnScroll.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
 });
