@@ -1,40 +1,14 @@
-// Smooth page transitions with fade out/in
-document.addEventListener('DOMContentLoaded', () => {
-  const links = document.querySelectorAll('nav a');
+// Scroll animations for .fade-in elements
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeElems = document.querySelectorAll(".fade-in");
 
-  links.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      const href = link.getAttribute('href');
-
-      document.body.classList.add('fade-out');
-
-      setTimeout(() => {
-        window.location.href = href;
-      }, 400);
-    });
-  });
-
-  // Fade-in animation on scroll
-  const faders = document.querySelectorAll('.fade-in');
-
-  const appearOptions = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -50px 0px"
-  };
-
-  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+  const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      appearOnScroll.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
     });
-  }, appearOptions);
+  }, { threshold: 0.1 });
 
-  faders.forEach(fader => {
-    appearOnScroll.observe(fader);
-  });
+  fadeElems.forEach(elem => observer.observe(elem));
 });
-
-// Add fade-out class on link click for transition effect
-document.body.classList.remove('fade-out');
