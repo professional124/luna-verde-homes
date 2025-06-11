@@ -1,21 +1,26 @@
-self.addEventListener('install', evt => {
-  evt.waitUntil(
-    caches.open('luna-verde-cache-v1').then(cache => {
-      return cache.addAll([
-        '/',
-        '/index.html',
-        '/style.css',
-        '/client.js',
-        '/manifest.json'
-      ]);
+const CACHE_NAME = 'luna-verde-cache-v1';
+const urlsToCache = [
+  '/',
+  '/index.html',
+  '/style.css',
+  '/client.js',
+  '/manifest.json',
+  '/icons/icon-192x192.png',
+  '/icons/icon-512x512.png'
+];
+
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(urlsToCache);
     })
   );
 });
 
-self.addEventListener('fetch', evt => {
-  evt.respondWith(
-    caches.match(evt.request).then(cached => {
-      return cached || fetch(evt.request);
+self.addEventListener('fetch', (event) => {
+  event.respondWith(
+    caches.match(event.request).then((response) => {
+      return response || fetch(event.request);
     })
   );
 });
