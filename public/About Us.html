@@ -2,36 +2,60 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Luna Verde Homes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Luna Verde Homes</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="about-page">
-  <header>
-    <h1>Luna Verde Homes</h1>
-    <p class="tagline">Sustainable Living, Thoughtfully Designed</p>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html" class="active">About Us</a></li>
-        <li><a href="Our Bundles.html">Our Bundles</a></li>
-        <li><a href="Sustainability.html">Sustainability</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
-      </ul>
-    </nav>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Luna Verde Homes</h1>
+      <p class="subtitle">Sustainable Living, Thoughtfully Designed</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About Us.html" class="active">About Us</a></li>
+          <li><a href="Bundles.html">Our Bundles</a></li>
+          <li><a href="Sustainability.html">Sustainability</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero fade-in">
-      <img src="https://via.placeholder.com/1200x400" alt="Our team">
+  <main class="about-main fade-in">
+    <div class="container">
       <h2>About Luna Verde Homes</h2>
-      <p>At Luna Verde Homes, we are passionate about creating sustainable living spaces that blend functionality with aesthetic appeal. Our team is dedicated to designing tiny homes that are both eco-friendly and comfortable.</p>
-    </section>
+      <p>At Luna Verde Homes, we are passionate about creating sustainable, beautiful tiny homes that sit right on the water. Our mission is to offer unforgettable experiences while promoting eco-friendly living and a deep connection to nature.</p>
+      <img src="https://via.placeholder.com/1000x400" alt="Our team and tiny homes" class="content-image" />
+      <h3>Our Story</h3>
+      <p>Founded in 2020, Luna Verde Homes grew from a love of tiny living and environmental stewardship. We combine modern design with responsible building practices to create homes that are both charming and sustainable.</p>
+      <h3>Meet The Team</h3>
+      <div class="cards">
+        <article class="card">
+          <img src="https://via.placeholder.com/300x300" alt="Founder photo" />
+          <h4>Alex Green</h4>
+          <p>Founder & Designer</p>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x300" alt="Project manager photo" />
+          <h4>Jordan Lee</h4>
+          <p>Project Manager</p>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x300" alt="Sustainability expert photo" />
+          <h4>Riley Chen</h4>
+          <p>Sustainability Expert</p>
+        </article>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Luna Verde Homes. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="client.js"></script>
