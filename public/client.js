@@ -1,54 +1,38 @@
-// Smooth scroll for anchor links (if used later)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+// Fade-in effect on scroll
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeElems = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  fadeElems.forEach(el => {
+    observer.observe(el);
   });
 });
 
-// Contact form submit handler (placeholder)
+// Contact form placeholder handler
 const contactForm = document.getElementById('contact-form');
 if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
+  contactForm.addEventListener('submit', e => {
     e.preventDefault();
-    alert('Thank you for contacting Luna Verde Homes! We will get back to you shortly.');
+    alert('Thank you! We will get back to you soon.');
     contactForm.reset();
   });
 }
 
-// Newsletter form submit handler (placeholder)
+// Newsletter placeholder handler
 const newsletterForm = document.getElementById('newsletter-form');
 if (newsletterForm) {
-  newsletterForm.addEventListener('submit', function (e) {
+  newsletterForm.addEventListener('submit', e => {
     e.preventDefault();
-    alert('Thanks for subscribing to our newsletter!');
+    alert('Subscribed! Watch your inbox for updates.');
     newsletterForm.reset();
   });
 }
-
-// Simple fade-in on scroll animations
-const fadeElems = document.querySelectorAll('section, .bundle-card, .testimonial-card, .team-member, .instagram-images img');
-
-const observerOptions = {
-  threshold: 0.1
-};
-
-const fadeObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = 1;
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-fadeElems.forEach(el => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(20px)';
-  el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-  fadeObserver.observe(el);
-});
