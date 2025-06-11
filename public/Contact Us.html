@@ -3,70 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luna Verde Homes - Contact Us</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
-  <script defer src="client.js"></script>
+  <title>Contact Us - Luna Verde Homes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-   <header class="sticky-header">
-    <nav class="navbar container">
-      <a href="index.html" class="logo">Luna Verde Homes</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html">About Us</a></li>
-        <li><a href="Our Bundles.html">Our Bundles</a></li>
-        <li><a href="Sustainability.html" class="active">Sustainability</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="bundles.html">Bundles</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="contact-us.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <main class="container contact-page fade-in">
-    <h1>Contact Luna Verde Homes</h1>
-    <p>Have questions or want to book your stay? Reach out to us!</p>
+  <main class="container fade-in">
+    <h1 class="page-title">Get in Touch</h1>
+    <p>We’d love to hear from you! Whether you have questions, want to book, or just want to say hello, please reach out.</p>
 
-    <form id="contact-form" action="#" method="POST" novalidate>
+    <form id="contact-form">
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required placeholder="Your full name" />
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
 
       <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+      <input type="email" id="email" name="email" placeholder="Your email address" required />
 
-      <label for="message">Your Message</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your message here..." required></textarea>
 
-      <button type="submit" class="btn-primary">Send Message</button>
+      <button type="submit">Send Message</button>
     </form>
-
-    <section class="contact-info">
-      <h2>Our Location</h2>
-      <p>123 Forest Trail Road, Green Valley, Country</p>
-      <h2>Phone</h2>
-      <p>+1 (555) 123-4567</p>
-      <h2>Email</h2>
-      <p>info@lunaverdehomes.com</p>
-    </section>
-
-    <!-- Embedded Instagram Feed (placeholder) -->
-    <section class="instagram-feed">
-      <h2>Follow Us on Instagram</h2>
-      <div class="instagram-embed">
-        <img src="https://via.placeholder.com/150?text=Instagram+1" alt="Instagram post 1" />
-        <img src="https://via.placeholder.com/150?text=Instagram+2" alt="Instagram post 2" />
-        <img src="https://via.placeholder.com/150?text=Instagram+3" alt="Instagram post 3" />
-        <img src="https://via.placeholder.com/150?text=Instagram+4" alt="Instagram post 4" />
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer container">
-    <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="Privacy Policy.html">Privacy Policy</a> | 
-      <a href="Terms.html">Terms of Service</a>
-    </div>
+  <footer>
+    &copy; 2025 Luna Verde Homes — Tiny Homes, Big Memories
   </footer>
+
+  <script src="client.js"></script>
 </body>
 </html>
