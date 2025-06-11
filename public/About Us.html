@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>About Us | Luna Verde Homes</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -20,6 +20,8 @@
           <li><a href="Contact Us.html">Contact Us</a></li>
         </ul>
       </nav>
+      <select class="lang-toggle"><option>EN</option><option>ES</option><option>ZH</option></select>
+      <button class="theme-toggle">🌓</button>
     </div>
   </header>
 
@@ -28,32 +30,36 @@
       <img src="https://via.placeholder.com/1200x400" alt="Our team">
       <p>Founded in 2020, Luna Verde Homes blends luxury with sustainability. Our mission is to create unforgettable moments while protecting our planet.</p>
     </section>
-
-    <section class="team fade-in">
-      <h2 class="section-title">Meet Our Team</h2>
-      <div class="team-cards">
-        <div class="team-member">
-          <img src="https://via.placeholder.com/300x300" alt="Alex Green">
-          <h3>Alex Green</h3><p>Founder & Designer</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/300x300" alt="Jordan Lee">
-          <h3>Jordan Lee</h3><p>Project Manager</p>
-        </div>
-        <div class="team-member">
-          <img src="https://via.placeholder.com/300x300" alt="Riley Morgan">
-          <h3>Riley Morgan</h3><p>Sustainability Lead</p>
+    <section class="section-title">Meet Our Team</section>
+    <div class="card-grid fade-in">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300" alt="Alex Green">
+        <div class="card-content">
+          <h3>Alex Green</h3>
+          <p>Founder & Designer</p>
         </div>
       </div>
-    </section>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300" alt="Jordan Lee">
+        <div class="card-content">
+          <h3>Jordan Lee</h3>
+          <p>Project Manager</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x300" alt="Riley Morgan">
+        <div class="card-content">
+          <h3>Riley Morgan</h3>
+          <p>Sustainability Lead</p>
+        </div>
+      </div>
+    </div>
+    <section id="floorplan-config" class="fade-in"></section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-    </div>
+    <div class="container"><p>© 2025 Luna Verde Homes. All rights reserved.</p></div>
   </footer>
-
   <script src="client.js"></script>
 </body>
 </html>
