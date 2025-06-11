@@ -3,56 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Luna Verde Homes</title>
+  <title>Home | Luna Verde Homes</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Luna Verde Homes</h1>
-    <p class="tagline">Sustainable Living, Thoughtfully Designed</p>
-    <nav class="navbar">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="About Us.html">About Us</a></li>
-        <li><a href="Our Bundles.html">Our Bundles</a></li>
-        <li><a href="Sustainability.html">Sustainability</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>Luna Verde Homes</h1>
+      <p class="subtitle">Sustainable Living, Thoughtfully Designed</p>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Our Bundles.html">Our Bundles</a></li>
+          <li><a href="Sustainability.html">Sustainability</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero fade-in">
-    <img src="https://via.placeholder.com/1200x400" alt="Tiny home by water">
-    <div class="hero-text">
+  <section class="hero fade-in" aria-label="Hero Image">
+    <img src="https://via.placeholder.com/1600x600" alt="" aria-hidden="true"/>
+    <div class="hero-overlay">
       <h2>Experience Tranquility by the Water</h2>
-      <p>Luxury eco-friendly stays with nature's best views.</p>
+      <p>Luxury eco-friendly tiny homes with breathtaking views.</p>
+      <div class="hero-buttons">
+        <a href="Our Bundles.html" class="btn">Explore Bundles</a>
+        <a href="#book" class="btn btn-outline">Book Now</a>
+      </div>
     </div>
   </section>
 
-  <section class="features fade-in">
-    <h2>Why Choose Us?</h2>
-    <div class="card-grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Sustainable materials">
-        <h3>Sustainable Materials</h3>
-        <p>We build with the planet in mind using eco-conscious materials.</p>
+  <main class="container">
+    <section class="choose-experience fade-in">
+      <h2 class="section-title">Choose Your Experience</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Snorkeling Adventure">
+          <h3>Snorkeling Adventure</h3>
+          <p>Gear, guide, and safe exploration of vibrant reefs.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Culinary Delights">
+          <h3>Culinary Delights</h3>
+          <p>Farm-to-table meals crafted by local chefs.</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" alt="Wellness Retreat">
+          <h3>Wellness Retreat</h3>
+          <p>Yoga, spa treatments, and guided meditation.</p>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Stunning Views">
-        <h3>Stunning Views</h3>
-        <p>Our tiny homes offer breathtaking lake and oceanfront views.</p>
+    </section>
+
+    <section class="testimonials fade-in">
+      <h2 class="section-title">What Our Guests Say</h2>
+      <div class="testimonials">
+        <div class="testimonial-box">
+          <p>“A magical escape! The design, the views, everything was perfect.”</p>
+          <h4>— Jamie L.</h4>
+        </div>
+        <div class="testimonial-box">
+          <p>“Eco-friendly luxury at its finest. Highly recommend!”</p>
+          <h4>— Morgan K.</h4>
+        </div>
+        <div class="testimonial-box">
+          <p>“Incredible experience with outstanding service and sustainability.”</p>
+          <h4>— Taylor R.</h4>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/300x200" alt="Modern Comfort">
-        <h3>Modern Comfort</h3>
-        <p>Minimalist design meets luxurious, modern living spaces.</p>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Luna Verde Homes. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="client.js"></script>
