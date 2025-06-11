@@ -3,59 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Luna Verde Homes - Our Retreats</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+  <title>Bundles | Luna Verde Homes</title>
+  <link rel="stylesheet" href="style.css" />
   <script defer src="client.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header class="sticky-header">
-    <nav class="navbar container">
+    <nav class="nav-bar">
       <a href="index.html" class="logo">Luna Verde Homes</a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html">About Us</a></li>
-        <li><a href="Our Retreats.html" class="active">Our Retreats</a></li>
-        <li><a href="Sustainability.html">Sustainability</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
+        <li><a href="about us.html">About Us</a></li>
+        <li><a href="Our bundles.html" class="active">Bundles</a></li>
+        <li><a href="sustainability.html">Sustainability</a></li>
+        <li><a href="contact us.html">Contact Us</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
     </nav>
   </header>
 
-  <main class="container retreats-page fade-in">
-    <h1>Our Retreats</h1>
-    <p>Discover the unique retreats we offer, each designed to immerse you in nature while providing the utmost comfort.</p>
-    <div class="gallery-cards">
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250?text=Forest+Escape" alt="Forest Escape" />
-        <h3>Forest Escape</h3>
-        <p>A cozy cabin surrounded by lush trees and tranquil trails.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250?text=Lakefront+Lodge" alt="Lakefront Lodge" />
-        <h3>Lakefront Lodge</h3>
-        <p>Wake up to stunning views of the lake and soothing water sounds.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250?text=Mountain+View+Pod" alt="Mountain View Pod" />
-        <h3>Mountain View Pod</h3>
-        <p>Minimalist pod with panoramic mountain views.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250?text=Garden+Suite" alt="Garden Suite" />
-        <h3>Garden Suite</h3>
-        <p>Relax in our eco-friendly garden suite surrounded by native plants.</p>
-      </div>
-    </div>
+  <main class="page-container">
+    <section class="intro-section fade-in">
+      <h1>Our Bundles</h1>
+      <p class="subheading">
+        Choose your perfect vacation package — from just a stay at our floating tiny homes to all-inclusive snorkeling experiences.
+      </p>
+    </section>
+
+    <section class="bundles-grid">
+      <!-- Bundle Card 1 -->
+      <article class="bundle-card fade-in">
+        <img src="https://via.placeholder.com/400x250?text=Stay+Only" alt="Stay Only Bundle" />
+        <h2>Stay Only</h2>
+        <p>Enjoy a peaceful getaway at our luxury floating tiny home with all the essentials for a relaxing vacation.</p>
+        <p class="price">$299 / night</p>
+        <button class="btn-primary">Book This Bundle</button>
+      </article>
+
+      <!-- Bundle Card 2 -->
+      <article class="bundle-card fade-in">
+        <img src="https://via.placeholder.com/400x250?text=Stay+%2B+Snorkel+Gear" alt="Stay + Snorkel Gear Bundle" />
+        <h2>Stay + Snorkeling Gear</h2>
+        <p>Get the stay plus snorkeling equipment rental — mask, fins, and snorkel included — ready for your ocean adventure.</p>
+        <p class="price">$399 / night</p>
+        <button class="btn-primary">Book This Bundle</button>
+      </article>
+
+      <!-- Bundle Card 3 -->
+      <article class="bundle-card fade-in">
+        <img src="https://via.placeholder.com/400x250?text=Stay+%2B+Snorkel+Instructor" alt="Stay + Snorkel Instructor Bundle" />
+        <h2>Stay + Snorkeling Instructor</h2>
+        <p>All the comforts of our tiny home, plus guided snorkeling tours with a certified instructor to make the most of your trip.</p>
+        <p class="price">$499 / night</p>
+        <button class="btn-primary">Book This Bundle</button>
+      </article>
+
+      <!-- Bundle Card 4 -->
+      <article class="bundle-card fade-in">
+        <img src="https://via.placeholder.com/400x250?text=Custom+Bundle" alt="Custom Bundle" />
+        <h2>Custom Bundle</h2>
+        <p>Create your own perfect vacation by combining our stay with any activities or gear you want.</p>
+        <p class="price">Contact us for pricing</p>
+        <button class="btn-primary">Contact Us</button>
+      </article>
+    </section>
   </main>
 
-  <footer class="site-footer container">
+  <footer class="site-footer">
     <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="Privacy Policy.html">Privacy Policy</a> | 
-      <a href="Terms.html">Terms of Service</a>
-    </div>
   </footer>
 </body>
 </html>
