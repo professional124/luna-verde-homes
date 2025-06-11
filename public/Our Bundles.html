@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Our Bundles | Luna Verde Homes</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -20,44 +20,52 @@
           <li><a href="Contact Us.html">Contact Us</a></li>
         </ul>
       </nav>
+      <select class="lang-toggle"><option>EN</option><option>ES</option><option>ZH</option></select>
+      <button class="theme-toggle">🌓</button>
     </div>
   </header>
 
   <main class="container">
-    <section class="bundle-cards fade-in">
-      <div class="bundle-card">
-        <img src="https://via.placeholder.com/300x200" alt="Watersports Adventure">
-        <h2>Watersports Adventure</h2>
-        <p>Snorkel gear, paddle boards, and guided tours included.</p>
-        <button>Learn More</button>
+    <section class="section-title">Explore Our Bundles</section>
+    <div class="card-grid fade-in">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Watersports">
+        <div class="card-content">
+          <h3>Watersports Adventure</h3>
+          <p>Snorkel gear, paddle boards, and guided tours.</p>
+          <button class="btn">Learn More</button>
+        </div>
       </div>
-      <div class="bundle-card">
-        <img src="https://via.placeholder.com/300x200" alt="Culinary Experience">
-        <h2>Culinary Experience</h2>
-        <p>Farm-to-table meals prepared by our local chef.</p>
-        <button>Learn More</button>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Culinary">
+        <div class="card-content">
+          <h3>Culinary Experience</h3>
+          <p>Farm-to-table meals prepared by our local chef.</p>
+          <button class="btn">Learn More</button>
+        </div>
       </div>
-      <div class="bundle-card">
-        <img src="https://via.placeholder.com/300x200" alt="Wellness Retreat">
-        <h2>Wellness Retreat</h2>
-        <p>Yoga, meditation, and spa kit delivered to your home.</p>
-        <button>Learn More</button>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Wellness">
+        <div class="card-content">
+          <h3>Wellness Retreat</h3>
+          <p>Yoga, meditation, and spa kits delivered to you.</p>
+          <button class="btn">Learn More</button>
+        </div>
       </div>
-      <div class="bundle-card">
-        <img src="https://via.placeholder.com/300x200" alt="Family Fun Pack">
-        <h2>Family Fun Pack</h2>
-        <p>Board games, beach toys, and outdoor movie nights.</p>
-        <button>Learn More</button>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Family Fun">
+        <div class="card-content">
+          <h3>Family Fun Pack</h3>
+          <p>Board games, beach toys, and outdoor movie nights.</p>
+          <button class="btn">Learn More</button>
+        </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-    </div>
+    <div class="container"><p>© 2025 Luna Verde Homes. All rights reserved.</p></div>
   </footer>
-
   <script src="client.js"></script>
 </body>
 </html>
