@@ -1,49 +1,40 @@
-// client.js
-
-// Fade-in animation on scroll
+// Smooth page transitions with fade out/in
 document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('nav a');
+
+  links.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = href;
+      }, 400);
+    });
+  });
+
+  // Fade-in animation on scroll
   const faders = document.querySelectorAll('.fade-in');
 
   const appearOptions = {
-    threshold: 0,
-    rootMargin: "0px 0px -100px 0px"
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px"
   };
 
-  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+  const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-        return;
-      } else {
-        entry.target.classList.add('appear');
-        appearOnScroll.unobserve(entry.target);
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      appearOnScroll.unobserve(entry.target);
     });
   }, appearOptions);
 
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
   });
-
-  // Bundle category filter logic
-  const categoryButtons = document.querySelectorAll('.category-btn');
-  const bundleCards = document.querySelectorAll('.bundle-card');
-
-  categoryButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Remove active class from all buttons
-      categoryButtons.forEach(b => b.classList.remove('active'));
-      // Add active class to clicked button
-      btn.classList.add('active');
-
-      const category = btn.getAttribute('data-category');
-
-      bundleCards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
 });
+
+// Add fade-out class on link click for transition effect
+document.body.classList.remove('fade-out');
