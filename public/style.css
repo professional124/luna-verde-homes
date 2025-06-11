@@ -1,214 +1,436 @@
-/* Reset & Base Styles */
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body and general */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  background: linear-gradient(135deg, #e8f0e8, #f9faf9);
+  color: #2c3e50;
   line-height: 1.6;
-  scroll-behavior: smooth;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
+/* Container */
+main {
+  flex: 1 0 auto;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: #2d2d2d;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #4CAF50;
-}
-
-/* Typography */
-h1, h2, h3 {
-  font-family: 'Playfair Display', serif;
-  color: #2d2d2d;
-  margin-bottom: 10px;
-}
-
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
-
-p {
-  margin-bottom: 15px;
-}
-
-/* Header and Navigation */
+/* Header and Nav */
 header {
-  background: #ffffff;
-  padding: 20px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #2a5d34;
+  padding: 15px 0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 100;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 nav ul li a {
-  padding: 8px 12px;
-  border-radius: 5px;
+  color: #d4e7d4;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav ul li a.active, nav ul li a:hover {
-  background-color: #4CAF50;
-  color: #fff;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #a0c39d;
+  color: #1b2a17;
 }
 
-/* Main Layout */
-main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Hero Section */
-.hero {
-  background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Headings hierarchy */
+h1, .hero h1, .about-hero h1, .bundles-hero h1, .sustainability-hero h1, .contact-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e3b20;
+  margin-bottom: 20px;
   text-align: center;
-  color: white;
+  line-height: 1.2;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: white;
+h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #3a6b35;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-/* Card Grids */
-.card-grid {
+h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  color: #2c3e50;
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #40513b;
+  margin-bottom: 18px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Sections with images */
+section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin: 20px auto 40px auto;
+  display: block;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease;
+}
+
+section img:hover {
+  transform: scale(1.03);
+}
+
+/* Hero sections */
+.hero, .about-hero, .bundles-hero, .sustainability-hero, .contact-hero {
+  margin-bottom: 60px;
+}
+
+/* Bundle Cards */
+.bundle-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.bundle-card {
+  background: #f0f8f0;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bundle-card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.bundle-card h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2b572b;
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.bundle-card p {
+  color: #466a47;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.bundle-card button {
+  background-color: #4a854a;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bundle-card button:hover {
+  background-color: #356b35;
+}
+
+/* Team Cards */
+.team-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
   margin-top: 30px;
 }
 
-.card {
-  background-color: white;
-  border-radius: 10px;
+.team-member {
+  background: #f5f8f5;
+  border-radius: 14px;
   padding: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 260px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  text-align: center;
   transition: transform 0.3s ease;
+  cursor: default;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.team-member img {
+  width: 100%;
+  height: 260px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-member h3 {
+  font-size: 1.3rem;
+  color: #2a4d2a;
+}
+
+.team-member p {
+  font-size: 1rem;
+  color: #40513b;
 }
 
 /* Testimonials */
 .testimonials {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding-bottom: 60px;
+}
+
+.testimonial-cards {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.testimonial {
-  flex: 1 1 calc(33.333% - 20px);
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Forms */
-form {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  max-width: 600px;
-  margin-top: 20px;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-form button.btn {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-form button.btn:hover {
-  background-color: #45a049;
-}
-
-/* Newsletter */
-.newsletter-form {
-  display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
-.newsletter-form input[type="email"] {
-  flex: 1;
-}
-
-/* Instagram Feed */
-.instagram-feed img {
-  border-radius: 10px;
+.testimonial-card {
+  background: #e4f0e4;
+  border-radius: 14px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  padding: 30px 25px;
+  width: 300px;
+  font-style: italic;
+  color: #3a6b35;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
   transition: transform 0.3s ease;
 }
 
-.instagram-feed img:hover {
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial-card h4 {
+  font-style: normal;
+  color: #2a452a;
+  margin-top: 18px;
+  text-align: right;
+}
+
+/* Sustainability lists */
+.eco-features ul {
+  list-style-type: square;
+  color: #3a6b35;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-size: 1.1rem;
+}
+
+.eco-features li {
+  margin-bottom: 12px;
+}
+
+/* Contact form */
+form {
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #2a4d2a;
+  font-size: 1.1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #a3c1a3;
+  border-radius: 10px;
+  font-family: 'Open Sans', sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4a854a;
+  background-color: #f1f9f1;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button[type="submit"] {
+  background-color: #2a5d34;
+  color: white;
+  padding: 14px 24px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  width: 50%;
+}
+
+button[type="submit"]:hover {
+  background-color: #1b3b20;
+}
+
+/* Newsletter form */
+.newsletter form {
+  max-width: 400px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  gap: 10px;
+}
+
+.newsletter input[type="email"] {
+  flex-grow: 1;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #a3c1a3;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #2a5d34;
+  color: white;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #1b3b20;
+}
+
+/* Instagram feed */
+.instagram-feed {
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+}
+
+.instagram-images {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.instagram-images img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.instagram-images img:hover {
   transform: scale(1.05);
-}
-
-/* Scroll Animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Footer */
 footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #2a5d34;
+  color: #d4e7d4;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 18px 0;
+  font-family: 'Poppins', sans-serif;
+  flex-shrink: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .bundle-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instagram-images img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+  }
 }
