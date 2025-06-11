@@ -46,19 +46,6 @@ nav ul li {
   margin: 2rem 0;
 }
 
-/* Badges */
-.badges {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin: 2rem 0;
-}
-
-.badge {
-  background-color: #e0e0e0;
-  padding: 1rem;
-  border-radius: 8px;
-}
 
 /* Loyalty Section */
 #loyalty {
