@@ -4,104 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luna Verde Homes - Home</title>
-  <link href="style.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
-  <script defer src="client.js"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="sticky-header">
-    <nav class="navbar container">
-      <a href="index.html" class="logo">Luna Verde Homes</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html">About Us</a></li>
-        <li><a href="Our Bundles.html">Our Bundles</a></li>
-        <li><a href="Sustainability.html" class="active">Sustainability</a></li>
-        <li><a href="Contact Us.html">Contact Us</a></li>
-      </ul>
-      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="bundles.html">Bundles</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://via.placeholder.com/1600x800?text=Hero+Image+Luna+Verde');">
-      <div class="hero-content container">
-        <h1>Luxury Sustainable Living in the Heart of Nature</h1>
-        <p>Experience eco-friendly tiny homes nestled in pristine wilderness.</p>
-        <a href="Contact Us.html" class="btn-primary">Book Your Stay</a>
+  <main class="container">
+    <h1 class="page-title">Welcome to Luna Verde Homes</h1>
+    <p>Your luxury tiny home retreat on pristine waters.</p>
+
+    <section class="gallery-grid fade-in">
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Tiny+Home+Exterior" alt="Tiny Home Exterior" />
+        <div class="card-content">
+          <h3>Waterfront Tiny Homes</h3>
+          <p>Experience tranquility and comfort with stunning views.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Snorkeling+Adventure" alt="Snorkeling Adventure" />
+        <div class="card-content">
+          <h3>Snorkeling & Water Sports</h3>
+          <p>Explore vibrant reefs and enjoy guided water activities.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Local+Cuisine" alt="Local Cuisine" />
+        <div class="card-content">
+          <h3>Local Cuisine Bundles</h3>
+          <p>Savor fresh, delicious meals sourced from local produce.</p>
+        </div>
       </div>
     </section>
 
-    <!-- About Preview -->
-    <section class="about-preview container fade-in">
-      <h2>Welcome to Luna Verde Homes</h2>
-      <p>Your getaway to serene eco-living and unforgettable experiences. Our tiny homes combine modern luxury with sustainable design.</p>
-      <a href="About Us.html" class="btn-secondary">Learn More About Us</a>
-    </section>
-
-    <!-- Retreats Preview -->
-    <section class="retreats-preview container fade-in">
-      <h2>Our Retreats</h2>
-      <div class="gallery-cards">
-        <div class="card">
-          <img src="https://via.placeholder.com/400x250?text=Retreat+1" alt="Retreat 1" />
-          <h3>Forest Escape</h3>
-          <p>Cozy cabin surrounded by towering trees and peaceful trails.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/400x250?text=Retreat+2" alt="Retreat 2" />
-          <h3>Lakefront Lodge</h3>
-          <p>Wake up to stunning water views and gentle waves.</p>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/400x250?text=Retreat+3" alt="Retreat 3" />
-          <h3>Mountain View Pod</h3>
-          <p>Modern minimalist pod with breathtaking mountain panoramas.</p>
-        </div>
-      </div>
-      <a href="Our Retreats.html" class="btn-secondary">Explore All Retreats</a>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials container fade-in">
+    <section class="testimonials fade-in">
       <h2>What Our Guests Say</h2>
-      <div class="testimonials-list">
-        <div class="testimonial-card">
-          <img src="https://via.placeholder.com/80?text=Guest+1" alt="Guest 1" />
-          <blockquote>"An unforgettable experience in a beautiful, sustainable setting. Highly recommend!"</blockquote>
-          <cite>- Sarah J.</cite>
-        </div>
-        <div class="testimonial-card">
-          <img src="https://via.placeholder.com/80?text=Guest+2" alt="Guest 2" />
-          <blockquote>"The perfect blend of comfort and nature. The staff was incredible."</blockquote>
-          <cite>- Michael R.</cite>
-        </div>
-        <div class="testimonial-card">
-          <img src="https://via.placeholder.com/80?text=Guest+3" alt="Guest 3" />
-          <blockquote>"I loved the eco-friendly approach and peaceful surroundings."</blockquote>
-          <cite>- Emily T.</cite>
-        </div>
+      <div class="testimonial">
+        <p>"A magical escape! The tiny home was cozy, and the water views unmatched."</p>
+        <div class="author">— Jamie L.</div>
+      </div>
+      <div class="testimonial">
+        <p>"Loved the snorkeling bundle — so much fun and great instruction."</p>
+        <div class="author">— Carlos M.</div>
       </div>
     </section>
 
-    <!-- Newsletter Signup -->
-    <section class="newsletter container fade-in">
-      <h2>Stay Connected</h2>
-      <p>Subscribe to our newsletter for exclusive offers and updates.</p>
-      <form id="newsletter-form" action="#" method="POST" novalidate>
-        <input type="email" placeholder="Your email address" aria-label="Email address" required />
-        <button type="submit" class="btn-primary">Subscribe</button>
+    <section class="newsletter fade-in">
+      <h2>Stay Updated</h2>
+      <p>Sign up for our newsletter to receive exclusive offers and news.</p>
+      <form id="newsletter-form">
+        <input type="email" placeholder="Your email address" required />
+        <button type="submit">Subscribe</button>
       </form>
     </section>
   </main>
 
-  <footer class="site-footer container">
-    <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-    <div class="footer-links">
-      <a href="Privacy Policy.html">Privacy Policy</a> | 
-      <a href="Terms.html">Terms of Service</a>
-    </div>
+  <footer>
+    &copy; 2025 Luna Verde Homes — Tiny Homes, Big Memories
   </footer>
+
+  <script src="client.js"></script>
 </body>
 </html>
