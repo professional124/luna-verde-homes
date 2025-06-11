@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact Us | Luna Verde Homes</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -20,30 +20,29 @@
           <li><a href="Contact Us.html" class="active">Contact Us</a></li>
         </ul>
       </nav>
+      <select class="lang-toggle"><option>EN</option><option>ES</option><option>ZH</option></select>
+      <button class="theme-toggle">🌓</button>
     </div>
   </header>
 
   <main class="container">
-    <section class="contact-hero fade-in">
+    <section class="fade-in">
       <form id="contact-form">
         <label for="name">Your Name</label>
-        <input type="text" id="name" required placeholder="Enter your name"/>
-
+        <input type="text" id="name" required placeholder="Enter your name">
         <label for="email">Your Email</label>
-        <input type="email" id="email" required placeholder="Enter your email"/>
-
+        <input type="email" id="email" required placeholder="Enter your email">
         <label for="message">Your Message</label>
         <textarea id="message" rows="6" required placeholder="Write your message here..."></textarea>
-
         <button type="submit">Send Message</button>
       </form>
     </section>
 
-    <section class="newsletter fade-in">
+    <section class="fade-in">
       <h2>Join Our Newsletter</h2>
       <p>Get exclusive offers and updates.</p>
       <form id="newsletter-form">
-        <input type="email" required placeholder="Your email address"/>
+        <input type="email" required placeholder="Your email address">
         <button type="submit">Subscribe</button>
       </form>
     </section>
@@ -51,20 +50,17 @@
     <section class="instagram-feed fade-in">
       <h2>Follow Us on Instagram</h2>
       <div class="instagram-images">
-        <img src="https://via.placeholder.com/200" alt="Instagram Photo 1"/>
-        <img src="https://via.placeholder.com/200" alt="Instagram Photo 2"/>
-        <img src="https://via.placeholder.com/200" alt="Instagram Photo 3"/>
-        <img src="https://via.placeholder.com/200" alt="Instagram Photo 4"/>
+        <img src="https://via.placeholder.com/200" alt="Instagram 1">
+        <img src="https://via.placeholder.com/200" alt="Instagram 2">
+        <img src="https://via.placeholder.com/200" alt="Instagram 3">
+        <img src="https://via.placeholder.com/200" alt="Instagram 4">
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-    </div>
+    <div class="container"><p>© 2025 Luna Verde Homes. All rights reserved.</p></div>
   </footer>
-
   <script src="client.js"></script>
 </body>
 </html>
