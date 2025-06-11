@@ -1,84 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luna Verde Homes</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Home | Luna Verde Homes</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
   <script src="client.js" defer></script>
-  <!-- JSON-LD Schema for SEO -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Luna Verde Homes",
-    "description": "Eco-friendly luxury homes in Brisbane, Australia.",
-    "url": "https://lunaverdehomes.com",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "123 Greenway Blvd",
-      "addressLocality": "Brisbane",
-      "addressRegion": "QLD",
-      "postalCode": "4000",
-      "addressCountry": "AU"
-    },
-    "telephone": "+61-7-1234-5678"
+    "@context":"https://schema.org","@type":"LodgingBusiness",
+    "name":"Luna Verde Homes","description":"Eco-friendly luxury homes in Brisbane, Australia.",
+    "url":"https://lunaverdehomes.com","address":{
+      "@type":"PostalAddress","streetAddress":"123 Greenway Blvd",
+      "addressLocality":"Brisbane","addressRegion":"QLD","postalCode":"4000","addressCountry":"AU"
+    },"telephone":"+61-7-1234-5678"
   }
   </script>
 </head>
 <body>
   <header>
-    <nav>
+    <div class="container">
       <div class="logo">Luna Verde Homes</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#booking">Booking</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
-          <select id="language-selector">
-            <option value="en">English</option>
-            <option value="es">Español</option>
-            <option value="fr">Français</option>
-          </select>
-        </li>
-        <li><button id="dark-mode-toggle">Toggle Dark Mode</button></li>
-      </ul>
-    </nav>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Our Bundles.html">Our Bundles</a></li>
+          <li><a href="Sustainability.html">Sustainability</a></li>
+          <li><a href="Contact Us.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <select id="language-selector">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="fr">Français</option>
+      </select>
+      <button id="dark-mode-toggle">🌓</button>
+    </div>
   </header>
 
-  <main>
-    <!-- Other sections like Home, Gallery, etc. -->
+  <section class="hero fade-in">
+    <img src="https://via.placeholder.com/1600x600" alt="">
+    <div class="hero-overlay">
+      <h2>Experience Tranquility by the Water</h2>
+      <p>Luxury eco-friendly tiny homes with breathtaking views.</p>
+      <div class="hero-buttons">
+        <button class="btn" onclick="location.href='Our Bundles.html'">Explore Bundles</button>
+        <button class="btn-outline" onclick="document.getElementById('booking').scrollIntoView()">Book Now</button>
+      </div>
+    </div>
+  </section>
 
-    <!-- Booking Widget Placeholder -->
-    <section id="booking">
+  <main class="container">
+    <section id="booking" class="fade-in">
       <h2>Book Your Stay</h2>
       <div class="booking-widget">
         <p>Booking widget coming soon. Stay tuned!</p>
       </div>
     </section>
 
-    <!-- Floor Plan Iframe Placeholder -->
-    <section id="floor-plan">
+    <section id="floor-plan" class="fade-in">
       <h2>Explore Our Floor Plans</h2>
-      <iframe src="https://example.com/floorplan" title="Floor Plan" width="100%" height="500px"></iframe>
+      <iframe src="https://example.com/floorplan" title="Floor Plan"></iframe>
     </section>
 
-   
-    <!-- Loyalty/Referral Section Placeholder -->
-    <section id="loyalty">
+    <section id="loyalty" class="fade-in">
       <h2>Loyalty & Referral Program</h2>
       <p>Earn rewards by referring friends and booking multiple stays. Details coming soon!</p>
     </section>
   </main>
 
-  <!-- Live Chat Stub -->
   <div id="live-chat">
     <button id="chat-button">Chat with us</button>
-    <div id="chat-box" class="hidden">
-      <p>Live chat feature coming soon!</p>
-    </div>
+    <div id="chat-box"><p>Live chat feature coming soon!</p></div>
   </div>
 </body>
 </html>
