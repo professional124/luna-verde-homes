@@ -1,151 +1,115 @@
-/* =============================
-   Base Styles
-============================= */
-body {
+/* Reset some default styles */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body & font */
+body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #F5F5F5; /* Pearl White */
   color: #1B1B2F; /* Midnight Navy */
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-h1, h2 {
-  color: #0F5257; /* Deep Teal */
-  margin-bottom: 10px;
+/* Container for header, main and footer */
+header, main, footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-p {
-  margin-bottom: 1rem;
+/* Header styles */
+header {
+  background-color: #0F5257; /* Deep Teal */
+  padding: 1rem 0;
+  color: #F5F5F5;
+  margin-bottom: 2rem;
+  border-radius: 8px;
 }
 
-/* =============================
-   Navigation
-============================= */
-nav {
-  background-color: #38A3A5; /* Turquoise Blue */
-  padding: 1rem;
-}
-
+/* Navigation menu */
 nav ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0 15px;
+  gap: 2rem;
 }
 
 nav ul li a {
+  color: #F5F5F5;
   text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #FF8C61; /* Soft Coral */
+  background-color: #38A3A5; /* Turquoise Blue */
+  color: #FFF;
 }
 
-/* =============================
-   Header
-============================= */
-header {
-  text-align: center;
-  padding: 2rem;
-  background-color: #0F5257; /* Deep Teal */
-  color: white;
+nav ul li a.active {
+  background-color: #FF8C61; /* Soft Coral */
+  color: #FFF;
+  font-weight: 700;
 }
 
+/* Page Title */
 header h1 {
+  text-align: center;
+  margin-top: 1rem;
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
-header p {
-  font-style: italic;
-  font-size: 1.2rem;
-  color: #FF8C61; /* Soft Coral */
-}
-
-/* =============================
-   Main Content
-============================= */
+/* Main content */
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(15 82 87 / 0.2);
 }
 
-section {
-  margin-bottom: 2rem;
+main h2 {
+  color: #0F5257;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 
-/* =============================
-   Footer
-============================= */
+main p {
+  font-size: 1.125rem;
+  color: #333;
+}
+
+/* Footer styles */
 footer {
   background-color: #1B1B2F; /* Midnight Navy */
-  color: white;
+  color: #F5F5F5;
   text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  border-radius: 8px 8px 0 0;
+  font-size: 0.9rem;
 }
 
-/* =============================
-   Contact Form
-============================= */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  max-width: 500px;
-  margin: 0 auto;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-form input,
-form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  padding: 0.75rem;
-  background-color: #38A3A5;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-form button:hover {
-  background-color: #0F5257;
-}
-
-/* =============================
-   Responsive Design
-============================= */
-@media (max-width: 600px) {
+/* Responsive */
+@media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
 
-  nav ul li {
-    margin: 10px 0;
+  main {
+    padding: 1rem;
   }
 
   header h1 {
