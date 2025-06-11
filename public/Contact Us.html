@@ -3,65 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Luna Verde Homes</title>
+  <title>Contact Us | Luna Verde Homes</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="About Us.html">About Us</a></li>
-        <li><a href="Bundles.html">Our Bundles</a></li>
-        <li><a href="Sustainability.html">Sustainability</a></li>
-        <li><a href="Contact Us.html" class="active">Contact Us</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo">Luna Verde Homes</h1>
+      <p class="subtitle">Sustainable Living, Thoughtfully Designed</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About Us.html">About Us</a></li>
+          <li><a href="Bundles.html">Our Bundles</a></li>
+          <li><a href="Sustainability.html">Sustainability</a></li>
+          <li><a href="Contact Us.html" class="active">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="fade-in">
-      <h1>Get In Touch</h1>
+  <main class="contact-section fade-in">
+    <div class="container">
+      <h2>Get In Touch</h2>
       <p>We'd love to hear from you! Fill out the form below and our team will get back to you as soon as possible.</p>
-
-      <form>
-        <label for="name">Your Name</label>
-        <input type="text" id="name" placeholder="Enter your name" required>
-
-        <label for="email">Your Email</label>
-        <input type="email" id="email" placeholder="Enter your email" required>
-
-        <label for="message">Your Message</label>
-        <textarea id="message" rows="6" placeholder="Write your message here..." required></textarea>
-
+      
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" placeholder="Write your message here..." required></textarea>
+        </div>
         <button type="submit" class="btn">Send Message</button>
       </form>
-    </section>
+    </div>
+  </main>
 
-    <section class="fade-in" style="margin-top: 60px;">
-      <h2>Join Our Newsletter</h2>
+  <section class="newsletter-section fade-in">
+    <div class="container">
+      <h3>Join Our Newsletter</h3>
       <p>Stay updated with our latest builds and sustainable living tips.</p>
       <form class="newsletter-form">
         <input type="email" placeholder="Your email address" required>
         <button type="submit" class="btn">Subscribe</button>
       </form>
-    </section>
+    </div>
+  </section>
 
-    <section class="fade-in instagram-feed" style="margin-top: 60px;">
-      <h2>Follow Us on Instagram</h2>
-      <div class="card-grid">
-        <img src="https://via.placeholder.com/300x200?text=Instagram+1" alt="Instagram 1">
-        <img src="https://via.placeholder.com/300x200?text=Instagram+2" alt="Instagram 2">
-        <img src="https://via.placeholder.com/300x200?text=Instagram+3" alt="Instagram 3">
-        <img src="https://via.placeholder.com/300x200?text=Instagram+4" alt="Instagram 4">
+  <section class="instagram-section fade-in">
+    <div class="container">
+      <h3>Follow Us on Instagram</h3>
+      <div class="image-gallery">
+        <img src="https://via.placeholder.com/200x150" alt="Instagram 1">
+        <img src="https://via.placeholder.com/200x150" alt="Instagram 2">
+        <img src="https://via.placeholder.com/200x150" alt="Instagram 3">
+        <img src="https://via.placeholder.com/200x150" alt="Instagram 4">
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+    </div>
   </footer>
 
   <script src="client.js"></script>
