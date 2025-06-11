@@ -1,35 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us | Luna Verde Homes</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Luna Verde Homes - Contact Us</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Our Retreats.html">Our Retreats</a></li>
+      <li><a href="Sustainability.html">Sustainability</a></li>
+      <li><a href="Contact Us.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="page-header fade-in">
     <h1>Contact Us</h1>
-    <p class="slogan">Tiny Homes, Big Memories</p>
-    <nav>
-  <a href="index.html">Home</a>
-  <a href="About%20Us.html">About Us</a>
-  <a href="Our%20Retreats.html">Our Retreats</a>
-  <a href="Sustainability.html">Sustainability</a>
-  <a href="Contact%20Us.html">Contact Us</a>
-</nav>
+    <p>We’d love to hear from you! Get in touch for questions or bookings.</p>
+  </section>
 
-  </header>
+  <section class="contact-form-section fade-in">
+    <form action="#" method="POST" class="contact-form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
 
-  <main>
-    <section>
-      <h2>Get in Touch</h2>
-      <p>Email: hello@lunaverdehomes.com<br/>Phone: (07) 1234 5678</p>
-    </section>
-  </main>
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required />
 
-  <footer>
-    <p>&copy; 2025 Luna Verde Homes. All rights reserved.</p>
-  </footer>
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Subject of your message" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required></textarea>
+
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <section class="contact-info fade-in">
+    <h2>Our Location</h2>
+    <p>123 Ocean Floor Blvd, Coral Reef City, Australia</p>
+    <h2>Phone</h2>
+    <p>+61 400 123 456</p>
+    <h2>Email</h2>
+    <p>contact@lunaverdehomes.com</p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+</footer>
+
+<script src="client.js"></script>
 </body>
 </html>
