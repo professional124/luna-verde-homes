@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Luna Verde Homes - About Us</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luna Verde Homes - About Us</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
+  <script defer src="client.js"></script>
 </head>
 <body>
+  <header class="sticky-header">
+    <nav class="navbar container">
+      <a href="index.html" class="logo">Luna Verde Homes</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About Us.html" class="active">About Us</a></li>
+        <li><a href="Our Retreats.html">Our Retreats</a></li>
+        <li><a href="Sustainability.html">Sustainability</a></li>
+        <li><a href="Contact Us.html">Contact Us</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="About Us.html" class="active">About Us</a></li>
-      <li><a href="Our Retreats.html">Our Retreats</a></li>
-      <li><a href="Sustainability.html">Sustainability</a></li>
-      <li><a href="Contact Us.html">Contact Us</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section class="page-header fade-in">
+  <main class="container about-page fade-in">
     <h1>About Luna Verde Homes</h1>
-    <p>Discover the story behind our eco-friendly tiny homes resort.</p>
-  </section>
-
-  <section class="about-details fade-in">
-    <img src="https://picsum.photos/700/400?random=12" alt="Founders" />
-    <div>
-      <h2>Our Mission</h2>
-      <p>
-        To provide luxury tiny homes that blend sustainability with comfort beneath the ocean waves, creating unforgettable family memories while protecting the environment.
-      </p>
-      <h2>Our Team</h2>
-      <p>
-        Founded by passionate environmentalists and designers, Luna Verde Homes brings together expertise in architecture, marine biology, and hospitality.
-      </p>
-      <h2>Our Vision</h2>
-      <p>
-        To lead the way in responsible travel, pioneering innovative underwater resorts that harmonize with nature.
-      </p>
+    <img src="https://via.placeholder.com/900x400?text=About+Us+Hero" alt="About Luna Verde Homes" class="page-hero" />
+    <p>At Luna Verde Homes, we believe in creating unforgettable experiences by blending modern luxury with sustainability. Our tiny homes are thoughtfully designed to offer comfort, style, and a deep connection with nature.</p>
+    <p>Founded in 2023, Luna Verde Homes is committed to eco-friendly practices, using renewable materials and minimizing environmental impact. Our mission is to provide a peaceful retreat where guests can unwind, recharge, and immerse themselves in the beauty of the outdoors.</p>
+    <h2>Our Team</h2>
+    <div class="team-cards">
+      <div class="card">
+        <img src="https://via.placeholder.com/150?text=Founder" alt="Founder" />
+        <h3>Jessica Green</h3>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150?text=Manager" alt="Manager" />
+        <h3>Samuel Lee</h3>
+        <p>Operations Manager</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/150?text=Designer" alt="Designer" />
+        <h3>Maria Lopez</h3>
+        <p>Lead Designer</p>
+      </div>
     </div>
-  </section>
+  </main>
 
-  <section class="gallery fade-in">
-    <h2>Our Journey</h2>
-    <div class="gallery-grid">
-      <img src="https://picsum.photos/300/200?random=13" alt="Design Sketches" />
-      <img src="https://picsum.photos/300/200?random=14" alt="Building Process" />
-      <img src="https://picsum.photos/300/200?random=15" alt="Team at Work" />
-      <img src="https://picsum.photos/300/200?random=16" alt="Sustainability Efforts" />
+  <footer class="site-footer container">
+    <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="Privacy Policy.html">Privacy Policy</a> | 
+      <a href="Terms.html">Terms of Service</a>
     </div>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 Luna Verde Homes. All rights reserved.</p>
-</footer>
-
-<script src="client.js"></script>
+  </footer>
 </body>
 </html>
