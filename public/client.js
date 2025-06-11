@@ -1,76 +1,49 @@
-// Wait for DOM to load
+// client.js
+
+// Fade-in animation on scroll
 document.addEventListener('DOMContentLoaded', () => {
-  // Sticky header shadow toggle on scroll
-  const header = document.querySelector('.sticky-header');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
+  const faders = document.querySelectorAll('.fade-in');
 
-  // Responsive nav menu toggle
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-  menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
+  const appearOptions = {
+    threshold: 0,
+    rootMargin: "0px 0px -100px 0px"
+  };
 
-  // Close menu when clicking a nav link (mobile)
-  document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-    });
-  });
-
-  // Smooth page transitions (fade out on link click)
-  document.querySelectorAll('a[href]').forEach(link => {
-    // Ignore external links and anchors
-    if (link.host !== window.location.host || link.getAttribute('href').startsWith('#')) return;
-
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      document.body.style.opacity = '0';
-      setTimeout(() => {
-        window.location.href = link.href;
-      }, 400);
-    });
-  });
-
-  // Fade in on page load
-  document.body.style.opacity = '0';
-  setTimeout(() => {
-    document.body.style.transition = 'opacity 0.4s ease';
-    document.body.style.opacity = '1';
-  }, 50);
-
-  // Contact form validation and submission simulation
-  const contactForm = document.getElementById('contact-form');
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      if (contactForm.checkValidity()) {
-        alert('Thank you for contacting Luna Verde Homes! We will get back to you shortly.');
-        contactForm.reset();
+  const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        return;
       } else {
-        alert('Please fill out all required fields correctly.');
+        entry.target.classList.add('appear');
+        appearOnScroll.unobserve(entry.target);
       }
     });
-  }
+  }, appearOptions);
 
-  // Newsletter form validation and submission simulation
-  const newsletterForm = document.getElementById('newsletter-form');
-  if (newsletterForm) {
-    newsletterForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const emailInput = newsletterForm.querySelector('input[type="email"]');
-      if (emailInput.checkValidity()) {
-        alert(`Thanks for subscribing with ${emailInput.value}!`);
-        newsletterForm.reset();
-      } else {
-        alert('Please enter a valid email address.');
-      }
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+  // Bundle category filter logic
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  const bundleCards = document.querySelectorAll('.bundle-card');
+
+  categoryButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Remove active class from all buttons
+      categoryButtons.forEach(b => b.classList.remove('active'));
+      // Add active class to clicked button
+      btn.classList.add('active');
+
+      const category = btn.getAttribute('data-category');
+
+      bundleCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
     });
-  }
+  });
 });
