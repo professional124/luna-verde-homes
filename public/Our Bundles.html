@@ -3,161 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bundles | Luna Verde Homes</title>
+  <title>Bundles - Luna Verde Homes</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="client.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header class="sticky-header">
-    <nav class="nav-bar">
-      <a href="index.html" class="logo">Luna Verde Homes</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about us.html">About Us</a></li>
-        <li><a href="bundles.html" class="active">Bundles</a></li>
-        <li><a href="sustainability.html">Sustainability</a></li>
-        <li><a href="contact us.html">Contact Us</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="bundles.html" class="active">Bundles</a></li>
+      <li><a href="sustainability.html">Sustainability</a></li>
+      <li><a href="contact-us.html">Contact Us</a></li>
+    </ul>
+  </nav>
 
-  <main class="page-container">
-    <section class="intro-section fade-in">
-      <h1>Our Bundles</h1>
-      <p class="subheading">
-        Choose the perfect experience for your stay at Luna Verde Homes. Select from a variety of carefully curated packages designed to make your trip unforgettable.
-      </p>
-    </section>
+  <main class="container fade-in">
+    <h1 class="page-title">Explore Our Bundles</h1>
+    <p>Enhance your stay with our specially curated bundles designed for every kind of adventure and relaxation.</p>
 
-    <!-- Category Tabs -->
-    <nav class="bundle-categories">
-      <button class="category-btn active" data-category="all">All</button>
-      <button class="category-btn" data-category="stay">🏠 Stay Packages</button>
-      <button class="category-btn" data-category="watersports">🌊 Water Sports</button>
-      <button class="category-btn" data-category="adventure">🧭 Adventure</button>
-      <button class="category-btn" data-category="food">🍽️ Food & Dining</button>
-      <button class="category-btn" data-category="wellness">🧘 Wellness</button>
-      <button class="category-btn" data-category="custom">⚙️ Custom</button>
-    </nav>
+    <section class="gallery-grid">
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Water+Sports+Bundle" alt="Water Sports Bundle" />
+        <div class="card-content">
+          <h3>Water Sports Bundle</h3>
+          <p>Includes snorkeling gear, paddleboards, and guided tours of the nearby reefs.</p>
+        </div>
+      </div>
 
-    <!-- Bundles Grid -->
-    <section class="bundles-grid">
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Food+Lover%27s+Bundle" alt="Food Lover's Bundle" />
+        <div class="card-content">
+          <h3>Food Lover's Bundle</h3>
+          <p>Enjoy gourmet meals featuring local seafood, tropical fruits, and handcrafted desserts.</p>
+        </div>
+      </div>
 
-      <!-- Stay Packages -->
-      <article class="bundle-card fade-in" data-category="stay">
-        <img src="https://via.placeholder.com/400x250?text=Stay+Only" alt="Stay Only Bundle" />
-        <h2>Stay Only</h2>
-        <p>Relax in our luxury floating tiny home with all essentials provided for a peaceful getaway.</p>
-        <p class="price">$299 / night</p>
-        <button class="btn-primary">Book This Bundle</button>
-      </article>
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Wellness+Bundle" alt="Wellness Bundle" />
+        <div class="card-content">
+          <h3>Wellness Bundle</h3>
+          <p>Relax with yoga sessions, meditation guides, and organic spa products delivered to your door.</p>
+        </div>
+      </div>
 
-      <article class="bundle-card fade-in" data-category="stay">
-        <img src="https://via.placeholder.com/400x250?text=Stay+%2B+Breakfast" alt="Stay + Breakfast" />
-        <h2>Stay + Breakfast</h2>
-        <p>Enjoy a delicious locally sourced breakfast delivered daily to your tiny home.</p>
-        <p class="price">$349 / night</p>
-        <button class="btn-primary">Book This Bundle</button>
-      </article>
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Adventure+Bundle" alt="Adventure Bundle" />
+        <div class="card-content">
+          <h3>Adventure Bundle</h3>
+          <p>Includes kayaking, fishing equipment, and an expert guide to explore local hidden gems.</p>
+        </div>
+      </div>
 
-      <article class="bundle-card fade-in" data-category="stay">
-        <img src="https://via.placeholder.com/400x250?text=Stay+%2B+Dinner" alt="Stay + Dinner Package" />
-        <h2>Stay + Dinner Package</h2>
-        <p>Gourmet dinners prepared by local chefs delivered to your doorstep each evening.</p>
-        <p class="price">$399 / night</p>
-        <button class="btn-primary">Book This Bundle</button>
-      </article>
-
-      <!-- Water Sports -->
-      <article class="bundle-card fade-in" data-category="watersports">
-        <img src="https://via.placeholder.com/400x250?text=Snorkeling+Gear" alt="Snorkeling Gear Rental" />
-        <h2>Snorkeling Gear Rental</h2>
-        <p>Full snorkeling equipment rental including mask, fins, and snorkel for your stay.</p>
-        <p class="price">$50 / day</p>
-        <button class="btn-primary">Add to Stay</button>
-      </article>
-
-      <article class="bundle-card fade-in" data-category="watersports">
-        <img src="https://via.placeholder.com/400x250?text=Kayaking" alt="Kayak Rental" />
-        <h2>Kayaking Bundle</h2>
-        <p>Kayak rental plus basic lessons to explore the surrounding waters confidently.</p>
-        <p class="price">$75 / day</p>
-        <button class="btn-primary">Add to Stay</button>
-      </article>
-
-      <article class="bundle-card fade-in" data-category="watersports">
-        <img src="https://via.placeholder.com/400x250?text=Snorkeling+Instructor" alt="Snorkeling Instructor" />
-        <h2>Snorkeling Instructor Guided Tour</h2>
-        <p>Certified guide leads you through the best snorkeling spots with safety and fun.</p>
-        <p class="price">$150 / session</p>
-        <button class="btn-primary">Book Tour</button>
-      </article>
-
-      <!-- Adventure -->
-      <article class="bundle-card fade-in" data-category="adventure">
-        <img src="https://via.placeholder.com/400x250?text=Fishing+Trip" alt="Fishing Trip" />
-        <h2>Fishing Bundle</h2>
-        <p>Fishing equipment rental and a guided fishing trip for a unique experience.</p>
-        <p class="price">$120 / trip</p>
-        <button class="btn-primary">Book Now</button>
-      </article>
-
-      <article class="bundle-card fade-in" data-category="adventure">
-        <img src="https://via.placeholder.com/400x250?text=Island+Hopping" alt="Island Hopping" />
-        <h2>Island Hopping Tour</h2>
-        <p>Boat tours to nearby islands for exploration, swimming, and relaxation.</p>
-        <p class="price">$200 / tour</p>
-        <button class="btn-primary">Book Tour</button>
-      </article>
-
-      <!-- Food & Dining -->
-      <article class="bundle-card fade-in" data-category="food">
-        <img src="https://via.placeholder.com/400x250?text=Gourmet+Picnic" alt="Gourmet Picnic Basket" />
-        <h2>Gourmet Picnic Basket</h2>
-        <p>Local delicacies packed fresh for a beautiful picnic on the water or beach.</p>
-        <p class="price">$80 / basket</p>
-        <button class="btn-primary">Order Basket</button>
-      </article>
-
-      <article class="bundle-card fade-in" data-category="food">
-        <img src="https://via.placeholder.com/400x250?text=Seafood+Feast" alt="Seafood Feast" />
-        <h2>Seafood Feast</h2>
-        <p>Fresh seafood dinner prepared by our chefs and delivered to your tiny home.</p>
-        <p class="price">$120 / dinner</p>
-        <button class="btn-primary">Order Feast</button>
-      </article>
-
-      <!-- Wellness -->
-      <article class="bundle-card fade-in" data-category="wellness">
-        <img src="https://via.placeholder.com/400x250?text=Spa+Massage" alt="Spa & Massage" />
-        <h2>Spa & Massage Package</h2>
-        <p>Mobile spa and massage services in the comfort of your tiny home.</p>
-        <p class="price">$100 / session</p>
-        <button class="btn-primary">Book Now</button>
-      </article>
-
-      <article class="bundle-card fade-in" data-category="wellness">
-        <img src="https://via.placeholder.com/400x250?text=Yoga+Sessions" alt="Yoga & Meditation" />
-        <h2>Yoga & Meditation Bundle</h2>
-        <p>Private yoga and meditation sessions on your deck or nearby beach.</p>
-        <p class="price">$90 / session</p>
-        <button class="btn-primary">Book Now</button>
-      </article>
-
-      <!-- Custom -->
-      <article class="bundle-card fade-in" data-category="custom">
-        <img src="https://via.placeholder.com/400x250?text=Custom+Bundle" alt="Custom Bundle" />
-        <h2>Custom Bundle</h2>
-        <p>Create your own vacation bundle by mixing and matching activities and meals.</p>
-        <p class="price">Contact us for pricing</p>
-        <button class="btn-primary">Contact Us</button>
-      </article>
+      <div class="gallery-card">
+        <img src="https://via.placeholder.com/400x180?text=Family+Fun+Bundle" alt="Family Fun Bundle" />
+        <div class="card-content">
+          <h3>Family Fun Bundle</h3>
+          <p>Board games, kid-friendly snorkel gear, and outdoor movie nights under the stars.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+  <footer>
+    &copy; 2025 Luna Verde Homes — Tiny Homes, Big Memories
   </footer>
+
+  <script src="client.js"></script>
 </body>
 </html>
