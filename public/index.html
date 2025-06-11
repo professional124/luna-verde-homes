@@ -2,34 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | Luna Verde Homes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luna Verde Homes - Tiny Homes, Big Memories</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Luna Verde Homes</h1>
-    <p class="slogan">Tiny Homes, Big Memories</p>
-    <nav>
-  <a href="index.html">Home</a>
-  <a href="About%20Us.html">About Us</a>
-  <a href="Our%20Retreats.html">Our Retreats</a>
-  <a href="Sustainability.html">Sustainability</a>
-  <a href="Contact%20Us.html">Contact Us</a>
-</nav>
 
-  </header>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="About Us.html">About Us</a></li>
+      <li><a href="Our Retreats.html">Our Retreats</a></li>
+      <li><a href="Sustainability.html">Sustainability</a></li>
+      <li><a href="Contact Us.html">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <main>
-    <section class="hero">
-      <h2>Welcome to Luna Verde Homes</h2>
-      <p>A luxury, eco-friendly underwater resort designed for unforgettable family vacations. Dive into a one-of-a-kind experience that balances comfort and sustainability.</p>
-    </section>
-  </main>
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Luna Verde Homes</h1>
+      <p class="subtitle">Luxury Tiny Homes, Big Memories</p>
+      <p>Your eco-friendly underwater resort for unforgettable family vacations.</p>
+      <a href="Our Retreats.html" class="btn-primary">Explore Our Retreats</a>
+    </div>
+    <div class="hero-image">
+      <img src="https://picsum.photos/800/500?blur=2" alt="Luna Verde Tiny Homes Resort" />
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Luna Verde Homes. All rights reserved.</p>
-  </footer>
+  <!-- About Preview -->
+  <section class="about-preview fade-in">
+    <h2>About Luna Verde</h2>
+    <div class="about-content">
+      <img src="https://picsum.photos/400/300?random=1" alt="About Luna Verde" />
+      <div>
+        <p>
+          Luna Verde Homes is dedicated to offering a sustainable and luxurious tiny home experience. Nestled underwater in pristine natural surroundings, our resort blends comfort with eco-conscious design.
+        </p>
+        <a href="About Us.html" class="btn-secondary">Learn More About Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Retreats Preview -->
+  <section class="retreats-preview fade-in">
+    <h2>Our Retreats</h2>
+    <div class="card-grid">
+      <article class="card">
+        <img src="https://picsum.photos/300/200?random=2" alt="Cozy Ocean View Tiny Home" />
+        <h3>Cozy Ocean View</h3>
+        <p>A compact, beautifully designed home with stunning views of the ocean floor.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/300/200?random=3" alt="Family Suite" />
+        <h3>Family Suite</h3>
+        <p>Spacious retreat with two bedrooms, perfect for families who love nature.</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/300/200?random=4" alt="Romantic Hideaway" />
+        <h3>Romantic Hideaway</h3>
+        <p>A private tiny home ideal for couples seeking tranquility and luxury.</p>
+      </article>
+    </div>
+    <a href="Our Retreats.html" class="btn-primary">View All Retreats</a>
+  </section>
+
+  <!-- Sustainability Highlight -->
+  <section class="sustainability-preview fade-in">
+    <h2>Our Commitment to Sustainability</h2>
+    <p>
+      Luna Verde Homes embraces green technology and eco-friendly materials, minimizing our environmental footprint while maximizing comfort.
+    </p>
+    <img src="https://picsum.photos/600/300?random=5" alt="Sustainability" />
+    <a href="Sustainability.html" class="btn-secondary">Discover More</a>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials fade-in">
+    <h2>What Our Guests Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"The underwater views were breathtaking. Luna Verde made our vacation magical and peaceful."</p>
+        <h4>- Sarah M.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Perfect tiny home for our family getaway! Eco-friendly and so cozy."</p>
+        <h4>- James T.</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"The best mix of luxury and sustainability. We’ll be back next year!"</p>
+        <h4>- Emily R.</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery fade-in">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://picsum.photos/300/200?random=6" alt="Tiny Home Exterior" />
+      <img src="https://picsum.photos/300/200?random=7" alt="Interior Design" />
+      <img src="https://picsum.photos/300/200?random=8" alt="Underwater View" />
+      <img src="https://picsum.photos/300/200?random=9" alt="Eco Materials" />
+      <img src="https://picsum.photos/300/200?random=10" alt="Resort Area" />
+      <img src="https://picsum.photos/300/200?random=11" alt="Family Enjoying Stay" />
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter fade-in">
+    <h2>Stay Updated</h2>
+    <p>Subscribe to our newsletter for special offers and news.</p>
+    <form action="#" method="POST" class="newsletter-form">
+      <input type="email" name="email" placeholder="Enter your email" required />
+      <button type="submit" class="btn-primary">Subscribe</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Luna Verde Homes. All rights reserved.</p>
+</footer>
+
+<script src="client.js"></script>
 </body>
 </html>
