@@ -1,4 +1,5 @@
-const CACHE_NAME = 'luna-verde-cache-v1';
+// service-worker.js
+const CACHE_NAME = 'luna-verde-cache-v2'; // <-- bump this from v1 to v2
 const urlsToCache = [
   '/',
   '/index.html',
@@ -9,18 +10,27 @@ const urlsToCache = [
   '/icons/icon-512x512.png'
 ];
 
-self.addEventListener('install', (event) => {
+// On activate, clear out old caches too:
+self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
-    })
+    caches.keys().then(keys =>
+      Promise.all(
+        keys
+          .filter(key => key !== CACHE_NAME)
+          .map(oldKey => caches.delete(oldKey))
+      )
+    )
   );
 });
 
-self.addEventListener('fetch', (event) => {
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
+  );
+});
+
+self.addEventListener('fetch', event => {
   event.respondWith(
-    caches.match(event.request).then((response) => {
-      return response || fetch(event.request);
-    })
+    caches.match(event.request).then(resp => resp || fetch(event.request))
   );
 });
