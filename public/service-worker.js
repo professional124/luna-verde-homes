@@ -1,5 +1,5 @@
 // service-worker.js
-const CACHE_NAME = 'luna-verde-cache-v2'; // <-- bump this from v1 to v2
+const CACHE_NAME = 'luna-verde-cache-v3';
 const urlsToCache = [
   '/',
   '/index.html',
